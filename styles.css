@@ -169,8 +169,16 @@ footer {
   font-weight: 700;
   border: 2px solid rgba(255,255,255,0.7);
   transition: 0.2s;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
 }
 
 .button.secondary:hover {
   background: rgba(255,255,255,0.1);
+}
+
+.icon-mail {
+  width: 22px;
+  height: 22px;
 }
