@@ -195,7 +195,19 @@ footer {
   color: #475569;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .card {
   padding: 20px;
 }
+
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+
 
