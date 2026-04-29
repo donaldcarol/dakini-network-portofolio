@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Azure Managed Identity</title>
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+
+<main class="section">
+  <h1>Azure Managed Identity: Secure Access Without Secrets</h1>
+
+  <p>
+    In modern cloud environments, eliminating stored credentials is a key security goal.
+    Azure Managed Identity provides a way for applications to authenticate securely
+    without using client secrets or certificates.
+  </p>
+
+  <h2>What is Managed Identity?</h2>
+  <p>
+    Managed Identity is an identity automatically managed by Azure and assigned to a resource,
+    such as a virtual machine or an application.
+  </p>
+
+  <ul>
+    <li>No credentials stored in code</li>
+    <li>Automatic credential rotation</li>
+    <li>Integrated with Azure AD (Entra ID)</li>
+  </ul>
+
+  <h2>Types of Managed Identity</h2>
+
+  <h3>System-Assigned</h3>
+  <ul>
+    <li>Tied to a single resource</li>
+    <li>Deleted when the resource is deleted</li>
+  </ul>
+
+  <h3>User-Assigned</h3>
+  <ul>
+    <li>Reusable across multiple resources</li>
+    <li>More flexible for complex environments</li>
+  </ul>
+
+  <h2>Real-World Scenario</h2>
+  <p>
+    In my lab, I configured a virtual machine with a system-assigned managed identity
+    and granted it access to Azure Key Vault using RBAC.
+  </p>
+
+  <ul>
+    <li>Role: Key Vault Secrets User</li>
+    <li>Scope: specific Key Vault</li>
+  </ul>
+
+  <p>
+    From the VM, I accessed secrets using Azure PowerShell without any stored credentials.
+  </p>
+
+  <h2>Benefits</h2>
+  <ul>
+    <li>Eliminates secret management</li>
+    <li>Improves security posture</li>
+    <li>Simplifies application design</li>
+  </ul>
+
+  <h2>Comparison with Service Principal</h2>
+
+  <table border="1" cellpadding="8">
+    <tr>
+      <th>Feature</th>
+      <th>Managed Identity</th>
+      <th>Service Principal</th>
+    </tr>
+    <tr>
+      <td>Secrets required</td>
+      <td>No</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td>Credential rotation</td>
+      <td>Automatic</td>
+      <td>Manual</td>
+    </tr>
+    <tr>
+      <td>Best use case</td>
+      <td>Azure resources</td>
+      <td>External apps</td>
+    </tr>
+  </table>
+
+  <h2>Conclusion</h2>
+  <p>
+    Managed Identity is the preferred authentication method for Azure-hosted workloads.
+    It reduces risk and aligns with modern zero-trust security principles.
+  </p>
+
+  <p><a href="../index.html">← Back</a></p>
+</main>
+
+</body>
+</html>

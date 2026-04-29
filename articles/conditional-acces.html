@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Conditional Access and Identity Hardening</title>
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+
+<main class="section">
+  <h1>Conditional Access and Identity Hardening in Microsoft Entra ID</h1>
+
+  <p>
+    Conditional Access is one of the most important controls in Microsoft Entra ID.
+    It allows organizations to enforce access decisions based on identity, device,
+    location, risk and application context.
+  </p>
+
+  <h2>Why Conditional Access Matters</h2>
+  <p>
+    In a cloud-first environment, identity becomes the new security perimeter.
+    Users can access applications from many locations and devices, so access must
+    be evaluated dynamically.
+  </p>
+
+  <h2>Core Policy Design</h2>
+  <ul>
+    <li>Require MFA for administrators</li>
+    <li>Require MFA for external or risky sign-ins</li>
+    <li>Block legacy authentication</li>
+    <li>Restrict access from unmanaged devices</li>
+    <li>Apply stronger controls for privileged roles</li>
+  </ul>
+
+  <h2>Users and Groups</h2>
+  <p>
+    Policies should be scoped carefully. A good approach is to start with pilot
+    groups, test the impact, then expand gradually to production users.
+  </p>
+
+  <h2>Device-Based Access</h2>
+  <p>
+    Conditional Access can require devices to be compliant or hybrid/Azure AD joined.
+    This is useful when combined with Intune compliance policies.
+  </p>
+
+  <h2>Privileged Access</h2>
+  <p>
+    Administrative accounts should have stricter policies than standard users.
+    Privileged accounts should use MFA, separate admin identities and preferably
+    Privileged Identity Management.
+  </p>
+
+  <h2>Real-World Lab Scenario</h2>
+  <p>
+    In a lab scenario, I would design Conditional Access policies for a cloud-first
+    organization using Entra ID, Intune-managed devices and role-based access.
+  </p>
+
+  <ul>
+    <li>Baseline MFA policy for all users</li>
+    <li>Stronger policy for administrators</li>
+    <li>Block access from unsupported platforms</li>
+    <li>Require compliant device for sensitive apps</li>
+    <li>Monitor sign-in logs before enforcing broadly</li>
+  </ul>
+
+  <h2>Best Practices</h2>
+  <ul>
+    <li>Always exclude emergency break-glass accounts</li>
+    <li>Use report-only mode before enforcement</li>
+    <li>Document policy purpose and scope</li>
+    <li>Avoid overlapping policies that are hard to troubleshoot</li>
+    <li>Review sign-in logs regularly</li>
+  </ul>
+
+  <h2>Conclusion</h2>
+  <p>
+    Conditional Access is a key part of identity hardening. When designed properly,
+    it improves security without creating unnecessary friction for users.
+  </p>
+
+  <p><a href="../index.html">← Back</a></p>
+</main>
+
+</body>
+</html>
