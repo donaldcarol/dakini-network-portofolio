@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Azure Authentication Patterns</title>
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+
+<main class="section">
+  <h1>Azure Authentication Patterns: Managed Identity vs Service Principal vs OIDC</h1>
+
+  <p>
+    Modern Azure applications require secure authentication without exposing secrets.
+    In this article, I compare three common approaches used in real-world deployments.
+  </p>
+
+  <h2>1. Service Principal (Client Secret)</h2>
+  <p>
+    Traditional approach using client ID and secret.
+  </p>
+  <ul>
+    <li>Easy to implement</li>
+    <li>Requires secret storage</li>
+    <li>Security risk if leaked</li>
+  </ul>
+
+  <h2>2. Managed Identity</h2>
+  <p>
+    Azure-managed identity assigned to a resource (VM, App Service, etc).
+  </p>
+  <ul>
+    <li>No secrets required</li>
+    <li>Best option for Azure-hosted apps</li>
+    <li>Limited to Azure resources</li>
+  </ul>
+
+  <h2>3. OIDC Federation (GitHub Actions)</h2>
+  <p>
+    Modern approach using OpenID Connect without storing credentials.
+  </p>
+  <ul>
+    <li>No secrets stored</li>
+    <li>Short-lived tokens</li>
+    <li>Ideal for CI/CD pipelines</li>
+  </ul>
+
+  <h2>Conclusion</h2>
+  <p>
+    For production systems, I prefer Managed Identity for Azure workloads and
+    OIDC federation for CI/CD pipelines. Service principals should be used only
+    when other options are not available.
+  </p>
+
+  <p><a href="../index.html">← Back</a></p>
+</main>
+
+</body>
+</html>
