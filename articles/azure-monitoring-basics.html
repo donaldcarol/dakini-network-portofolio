@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Azure Monitoring Basics</title>
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+
+<main class="section">
+  <h1>Azure Monitoring Basics: VM Insights, Log Analytics and Alerts</h1>
+
+  <p>
+    Monitoring is a critical component of any Azure environment. In this article,
+    I summarize the core services used to monitor virtual machines and applications.
+  </p>
+
+  <h2>1. Azure Monitor</h2>
+  <p>
+    Azure Monitor is the central platform for collecting and analyzing telemetry
+    data from Azure resources.
+  </p>
+  <ul>
+    <li>Collects metrics and logs</li>
+    <li>Integrates with alerts and dashboards</li>
+    <li>Supports KQL queries</li>
+  </ul>
+
+  <h2>2. Log Analytics Workspace</h2>
+  <p>
+    Log Analytics is used to store and query logs from multiple resources.
+  </p>
+  <ul>
+    <li>Centralized logging</li>
+    <li>KQL-based queries</li>
+    <li>Used by most monitoring features</li>
+  </ul>
+
+  <h2>3. VM Insights</h2>
+  <p>
+    VM Insights provides detailed performance data for virtual machines.
+  </p>
+  <ul>
+    <li>CPU, memory, disk, network metrics</li>
+    <li>Dependency mapping</li>
+    <li>Requires Azure Monitor agent</li>
+  </ul>
+
+  <h2>4. Alerts</h2>
+  <p>
+    Alerts notify administrators when something goes wrong.
+  </p>
+  <ul>
+    <li>Metric alerts (CPU, disk, etc.)</li>
+    <li>Log alerts (based on KQL)</li>
+    <li>Action groups (email, webhook, automation)</li>
+  </ul>
+
+  <h2>Best Practices</h2>
+  <ul>
+    <li>Enable monitoring during deployment</li>
+    <li>Use Log Analytics as central point</li>
+    <li>Create alerts for critical resources</li>
+    <li>Avoid alert fatigue (too many alerts)</li>
+  </ul>
+
+  <h2>Conclusion</h2>
+  <p>
+    A well-designed monitoring setup improves reliability, security and response time.
+    Azure Monitor and Log Analytics are essential tools for any production environment.
+  </p>
+
+  <p><a href="../index.html">← Back</a></p>
+</main>
+
+</body>
+</html>
